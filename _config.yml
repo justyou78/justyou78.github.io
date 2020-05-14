@@ -14,9 +14,9 @@ author: Some Person
 navbar-links:
   일상: "aboutme"
   IT:
-    - C: "https://beautifuljekyll.com"
-    - JAVA : "https://www.markdowntutorial.com/"
-    - LINUX : "https://www.markdowntutorial.com/"
+    - C: "test1"
+    - JAVA : "test2"
+    - LINUX : "test3"
  
 
 # --- Logo --- #
