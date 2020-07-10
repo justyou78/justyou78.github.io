@@ -19,7 +19,7 @@ navbar-links:
     - LINUX : "test3"
   Network:
     - L2: "network/L2"
-    - L3: "network/L3"
+    - L3: "network/L3.md"
     - L4: "network/L4"
 
 # --- Logo --- #
