@@ -13,7 +13,7 @@ author: An donggue
 
 navbar-links:
   일상: "aboutme"
-  IT:
+  Language:
     - C: "test1"
     - JAVA : "test2"
     - LINUX : "test3"
@@ -21,6 +21,8 @@ navbar-links:
     - L2: "network/L2"
     - L3: "network/L3"
     - L4: "network/L4"
+  Application:
+    - Spring: 
 
 # --- Logo --- #
 
