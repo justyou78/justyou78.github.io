@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Home</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Home" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Home" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","headline":"Home","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+      <!-- 초기 화면은 Menu 제공 X -->
+    
+    <!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="container">
+        <div class="product">
+
+            <h2  id="frontImg">Blog</h2>
+            <h2  id="backImg">Project</h2>
+            <!-- <img src="images/shoes2.png" alt="" id="backImg"> -->
+            
+            <div class="product-inner" id="productBox">
+                <div class="product-front">
+                    <div class="product-top">
+                        <h1>DG An</h1> 
+                    </div>
+                    <div class="product-bottom">
+                        <p>사이트 선택</p>
+                        <h2>블로그</h2>
+                        <!-- <h1>127 <span>$</span></h1> -->
+                        <button type="button">선택하기</button>
+                        <div class="color-select">
+                            <div class="select-item">
+                                Blog
+                            </div>
+                            <div class="select-item" onclick="flipRight()">
+                                Project
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-back">
+                    <div class="product-top product-top2">
+                        <h1>DG An</h1>
+                    </div>
+                    <div class="product-bottom">
+                        <p>사이트 선택</p>
+                        <h2>프로젝트</h2>
+                        <!-- <h1>125 <span>$</span></h1> -->
+                        <button type="button">선택하기</button>
+                        <div class="color-select">
+                            <div class="select-item" onclick="flipLeft()">
+                                Blog
+                            </div>
+                            <div class="select-item">
+                                Project
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-side"></div>
+                <div class="right-side"></div>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        var productBox = document.getElementById("productBox")
+        var frontImg = document.getElementById("frontImg")
+        var backImg = document.getElementById("backImg")
+        
+        function flipRight(){
+            productBox.style.transform = "rotateY(180deg)";
+            frontImg.style.left = "650px"
+            backImg.style.left = "30px"
+            frontImg.style.transform="rotate(-30deg)"
+            backImg.style.transform="rotate(10deg)"
+            
+        }
+        
+        function flipLeft(){
+            productBox.style.transform = "rotateY(0deg)";
+            frontImg.style.left = "30px"
+            backImg.style.left = "-650px"
+            frontImg.style.transform="rotate(10deg)"
+            backImg.style.transform="rotate(-30deg)"
+        }
+        
+    </script>
+  </body>
+</html>
+  </body>
+</html>

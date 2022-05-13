@@ -1,0 +1,86 @@
+---
+title: Home
+---
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="container">
+        <div class="product">
+
+            <h2  id="frontImg">Blog</h2>
+            <h2  id="backImg">Project</h2>
+            <!-- <img src="images/shoes2.png" alt="" id="backImg"> -->
+            
+            <div class="product-inner" id="productBox">
+                <div class="product-front">
+                    <div class="product-top">
+                        <h1>{{ site.data.ts.ko.main_text }}</h1> 
+                    </div>
+                    <div class="product-bottom">
+                        <p>{{ site.data.ts.ko.choose_site }}</p>
+                        <h2>{{ site.data.ts.ko.blog }}</h2>
+                        <!-- <h1>127 <span>$</span></h1> -->
+                        <button type="button">{{ site.data.ts.ko.choice }}</button>
+                        <div class="color-select">
+                            <div class="select-item">
+                                Blog
+                            </div>
+                            <div class="select-item" onclick="flipRight()">
+                                Project
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-back">
+                    <div class="product-top product-top2">
+                        <h1>{{ site.data.ts.ko.main_text }}</h1>
+                    </div>
+                    <div class="product-bottom">
+                        <p>{{ site.data.ts.ko.choose_site }}</p>
+                        <h2>{{ site.data.ts.ko.project }}</h2>
+                        <!-- <h1>125 <span>$</span></h1> -->
+                        <button type="button">{{ site.data.ts.ko.choice }}</button>
+                        <div class="color-select">
+                            <div class="select-item" onclick="flipLeft()">
+                                Blog
+                            </div>
+                            <div class="select-item">
+                                Project
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-side"></div>
+                <div class="right-side"></div>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        var productBox = document.getElementById("productBox")
+        var frontImg = document.getElementById("frontImg")
+        var backImg = document.getElementById("backImg")
+        
+        function flipRight(){
+            productBox.style.transform = "rotateY(180deg)";
+            frontImg.style.left = "650px"
+            backImg.style.left = "30px"
+            frontImg.style.transform="rotate(-30deg)"
+            backImg.style.transform="rotate(10deg)"
+            
+        }
+        
+        function flipLeft(){
+            productBox.style.transform = "rotateY(0deg)";
+            frontImg.style.left = "30px"
+            backImg.style.left = "-650px"
+            frontImg.style.transform="rotate(10deg)"
+            backImg.style.transform="rotate(-30deg)"
+        }
+        
+    </script>
+  </body>
+</html>

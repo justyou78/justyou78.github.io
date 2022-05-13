@@ -1,0 +1,12 @@
+bundle update - 플러그인 설치.
+
+Gemfile - 번들러를 보유한 파일. 번들러는 gems들을 설치하고, Gemfile.lock 파일을 생성한다.
+
+Gemfile.lock - 차후의 bundle install 대하여 현재의 gem 버전을 유지하도록 한다. 만약, gem version들을 업데이트
+하길 원한다면, 'bundle update' 명령어를 사용한다. Gemfile을 사용할 때는, 'bundle exec jekyll serve' 명령어를 사용한다
+
+JEKYLL_ENV -  프로덕션 단계에서는 출력하지만 개발 단계에서는 출력하지 않으려는 경우가 있습니다. 이때, 
+'JEKYLL_ENV=production bundle exec jekyll build' 명령어를 사용하며, 아래와 같이 분기문을 제공합니다.
+{% if jekyll.environment == "production" %}
+  <script src="my-analytics-script.js"></script>
+{% endif %}

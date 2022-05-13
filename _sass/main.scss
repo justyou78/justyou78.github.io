@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #140019;
+}
+
+.container {
+  width: 600px;
+  height: 100vh; /* 화면 크기를 기준으로 하는 높이 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto; /* 수평방향 마진 값을 자동으로 설정. 즉, 해당 요소를 포함하는 부모 요소의 정중앙에 위치.*/
+  /* background와 background-color의 차이 
+      * background-color는 색생만 지정.
+      * background는 생상이외에도 다양한 옵션을 추가할 수 있다.
+    */
+  overflow: hidden;
+}
+
+.product {
+  width: 400px;
+  height: 550px;
+  /* 3d위치 요소에 약간의 원근감을 주기 위해 z index 평면과 사용자 사이에 거리를 결정  */
+  perspective: 1000px;
+}
+
+.product-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 1s;
+  /* transform: rotateY(-60deg); */
+}
+
+.product-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transform: translateZ(25px);
+}
+
+.product-top {
+  height: 50%;
+  width: 100%;
+  background: linear-gradient(#0794a6, #9bae07);
+  color: #fff;
+}
+
+.product-top h1 {
+  font-size: 110px;
+  margin-left: 20px;
+  font-style: italic;
+  opacity: 0.3;
+}
+
+.product-bottom {
+  padding: 50px 30px;
+}
+
+.product-bottom p {
+  font-size: 12px;
+}
+
+.product-bottom h2 {
+  margin-bottom: 35px;
+
+  letter-spacing: 1px;
+}
+
+.product-front .product-bottom h2 {
+  color: #008394;
+}
+
+.product-back .product-bottom h2 {
+  color: violet;
+}
+
+.product-bottom h1 {
+  font-size: 40px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.product-bottom h1 span {
+  color: #008394;
+}
+
+.product-bottom button {
+  padding: 9px 25px; /* button rule padding ?*/
+  background: transparent;
+  color: #008394;
+  border: 1px solid #008394;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.product-front .product-bottom button {
+  color: #008394;
+  border: 1px solid #008394;
+}
+
+.product-back .product-bottom button {
+  color: violet;
+  border: 1px solid violet;
+}
+
+.color-select {
+  display: flex;
+  float: right; /* 텍스트 및 인라인 요소가 주위를 감쌀 수 있도록 합니다.*/
+  margin-top: -10px;
+  opacity: 0.8;
+}
+
+.select-item {
+  width: 70px;
+  height: 50px;
+  margin: 0 10px;
+  padding: 5px;
+  /* x, y, blur, spread radius */
+  box-shadow: -5px 0 8px 2px grey;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.select-item img {
+  width: 80%;
+  padding-top: 10%;
+}
+
+.select-item:hover {
+  background: rgba(156, 216, 244, 0.5);
+  box-shadow: none;
+  transition: 0.5s;
+}
+
+.product-top2 {
+  background: linear-gradient(#c370fd, #3be1b8);
+}
+
+.product-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #fff;
+  transform: translateZ(-25px) rotateY(180deg);
+}
+
+.left-side,
+.right-side {
+  width: 50px;
+  height: 100%;
+  background: #fff;
+  left: -25px;
+  transform: rotateY(90deg);
+  position: absolute;
+  top: 0;
+}
+
+.right-side {
+  transform: rotateY(-90deg);
+  left: auto; /* right값을 주기위해서 auto를 설정함.*/
+  right: -25px;
+}
+
+#frontImg {
+  width: 340px;
+  top: 190px;
+  left: 30px;
+  position: absolute;
+  transform: translateZ(50px) rotate(10deg);
+  transition: 1s;
+  z-index: 100;
+  font-size: 100px;
+  color: #0799a6;
+}
+
+#backImg {
+  width: 340px;
+  top: 190px;
+  left: -620px;
+  position: absolute;
+  transform: translateZ(50px) rotate(-30deg);
+  transition: 1s;
+  z-index: 100;
+  font-size: 100px;
+  color: #c370fd;
+}
