@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Staff</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Staff</title>
@@ -21,11 +22,12 @@
 
   </head>
   <body>
-      <!-- 초기 화면은 Menu 제공 X -->
+      <!-- 초기 화면은 Sidebar 제공 X -->
     
-        <nav>
+        <div class="blog">
+        <!-- <nav>
     
-      <a href="/" >Home</a>
+      <a href="/react.html" >Home</a>
     
       <a href="/about.html" >About</a>
     
@@ -33,9 +35,56 @@
     
       <a href="/staff.html" class="current">Staff</a>
     
-  </nav>
+      <a href="/react.html" >React</a>
     
-    <h1>Staff</h1>
+  </nav> -->
+
+
+<div class="nav" id="nav">
+    <nav class="nav__content">
+       
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-chevron-right'></i>  
+        </div>
+        <a href="#" class="nav__logo">
+            <i class='bx bxs-heart' ></i>
+            <span class="nav__logo-name">Healthy</span>
+        </a>
+
+        <div class="nav__list">
+            
+                <a href="/react.html"  class="nav__link" >
+                    <i class="bx bxl-react" ></i>
+                    <span class="nav__name">Home</span>    
+                </a>
+            
+                <a href="/about.html"  class="nav__link" >
+                    <i class="bx bxl-react" ></i>
+                    <span class="nav__name">About</span>    
+                </a>
+            
+                <a href="/blog.html"  class="nav__link" >
+                    <i class="bx bxl-react" ></i>
+                    <span class="nav__name">Blog</span>    
+                </a>
+            
+                <a href="/staff.html" class="nav__link active-link" >
+                    <i class="bx bxl-react" ></i>
+                    <span class="nav__name">Staff</span>    
+                </a>
+            
+                <a href="/react.html"  class="nav__link" >
+                    <i class="bx bxl-react" ></i>
+                    <span class="nav__name">React</span>    
+                </a>
+            
+        </div>
+    </nav>
+   
+    
+</div>
+        <main class="container section">
+            <h1>Staff</h1>
 
 <ul>
   
@@ -54,5 +103,12 @@
     </li>
   
 </ul>
+        </main>
+        </div>
+    
+    
   </body>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/navi.js"></script>
+  
 </html>

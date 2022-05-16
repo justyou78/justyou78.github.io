@@ -1,8 +1,15 @@
 - name: Home
-  link: /
+  link: /react.html
+  iconClass: bx bxl-react
 - name: About
   link: /about.html
+  iconClass: bx bxl-react
 - name: Blog
   link: /blog.html
+  iconClass: bx bxl-react
 - name: Staff
   link: /staff.html
+  iconClass: bx bxl-react
+- name: React
+  link: /react.html
+  iconClass: bx bxl-react

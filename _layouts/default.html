@@ -4,14 +4,25 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     {% feed_meta %}
     {% seo %}
   </head>
   <body>
-      <!-- 초기 화면은 Menu 제공 X -->
+      <!-- 초기 화면은 Sidebar 제공 X -->
     {% if page.url != '/' %}
+        <div class="blog">
         {% include navigation.html %}
+        <main class="container section">
+            {{ content }}
+        </main>
+        </div>
+    {% elsif page.url == '/' %}    
+        {{ content }}
     {% endif %}
-    {{ content }}
+    
   </body>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/navi.js"></script>
+  
 </html>

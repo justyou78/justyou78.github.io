@@ -1,15 +1,38 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: ($body-font);
   box-sizing: border-box;
 }
 
 body {
-  background: #140019;
+  position: relative;
+  font-size: ($normal-font-size);
+  background-color: ($body-color);
+  color: ($text-color);
+}
+
+h1 {
+  color: ($title-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 968px) {
+  :root {
+    $normal-font-size: 1rem;
+  }
 }
 
 .container {
+  background: rgb(252, 243, 243);
   width: 600px;
   height: 100vh; /* 화면 크기를 기준으로 하는 높이 */
   display: flex;
@@ -161,7 +184,7 @@ body {
 .left-side,
 .right-side {
   width: 50px;
-  height: 100%;
+  height: 550px;
   background: #fff;
   left: -25px;
   transform: rotateY(90deg);

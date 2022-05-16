@@ -1,5 +1,30 @@
-<nav>
+<!-- <nav>
     {% for item in site.data.navigation %}
       <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
     {% endfor %}
-  </nav>
+  </nav> -->
+
+
+<div class="nav" id="nav">
+    <nav class="nav__content">
+       
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-chevron-right'></i>  
+        </div>
+        <a href="#" class="nav__logo">
+            <i class='bx bxs-heart' ></i>
+            <span class="nav__logo-name">Healthy</span>
+        </a>
+
+        <div class="nav__list">
+            {% for item in site.data.navigation %}
+                <a href="{{ item.link }}" {% if page.url == item.link %}class="nav__link active-link" {% elsif page.url != item.link %} class="nav__link" {% endif %}>
+                    <i class="{{ item.iconClass }}" ></i>
+                    <span class="nav__name">{{ item.name }}</span>    
+                </a>
+            {% endfor %}
+        </div>
+    </nav>
+   
+    
+</div>
