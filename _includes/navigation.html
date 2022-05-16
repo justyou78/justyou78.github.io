@@ -12,16 +12,21 @@
             <i class='bx bx-chevron-right'></i>  
         </div>
         <a href="#" class="nav__logo">
-            <i class='bx bxs-heart' ></i>
-            <span class="nav__logo-name">Healthy</span>
+            <i class='bx bxs-home black' ></i>
+            <span class="nav__logo-name">Home</span>
         </a>
 
         <div class="nav__list">
             {% for item in site.data.navigation %}
-                <a href="{{ item.link }}" {% if page.url == item.link %}class="nav__link active-link" {% elsif page.url != item.link %} class="nav__link" {% endif %}>
-                    <i class="{{ item.iconClass }}" ></i>
+            <a href="{{ item.link }}" {% if page.url == item.link %}class="nav__link active-link" {% elsif page.url != item.link %} class="nav__link" {% endif %}>
+                {% if item.type == 'icon' %}
+                    <i class="{{ item.iconClass }}" style="color:{{ item.color }}" ></i>
                     <span class="nav__name">{{ item.name }}</span>    
-                </a>
+                {% elsif item.type == 'svg' %}
+                    {{ item.value }}
+                    <span class="nav__name">{{ item.name }}</span>    
+                {% endif %}
+            </a>
             {% endfor %}
         </div>
     </nav>
