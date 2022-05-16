@@ -4,7 +4,7 @@ var backImg = document.getElementById('backImg');
 var blogButtons = document.getElementsByName('blog');
 var projectButtons = document.getElementsByName('project');
 
-function flipRight(test) {
+function flipRight() {
   productBox.style.transform = 'rotateY(180deg)';
   frontImg.style.left = '650px';
   backImg.style.left = '30px';
@@ -15,7 +15,7 @@ function flipRight(test) {
     bt.style.background = 'rgba(156, 216, 244, 0.5)';
   });
   blogButtons.forEach((bt) => {
-    bt.style.background = 'inherit';
+    bt.style.removeProperty('background');
   });
 }
 
@@ -30,7 +30,7 @@ function flipLeft() {
     bt.style.background = 'rgba(156, 216, 244, 0.5)';
   });
   projectButtons.forEach((bt) => {
-    bt.style.background = 'inherit';
+    bt.style.removeProperty('background');
   });
 }
 
@@ -41,3 +41,6 @@ function movePage(type) {
   var link = window.location.href;
   location.href = `${link}/blog`;
 }
+
+// 초기 블로그 버튼 활성화
+flipLeft();
