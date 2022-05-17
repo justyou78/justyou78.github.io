@@ -9,6 +9,11 @@
   .container {
     margin-left: 2rem;
     margin-right: 2rem;
+    // width: 100%;
+    // min-height: 100vh;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
   }
 
   .section {
@@ -160,4 +165,18 @@
       zoom: 2.5; /* 250% 확대 */
     }
   }
+
+  .gallery {
+    display: grid;
+    /* 컬럼 갯수, 최소 최대 사이즈 */
+    /* 하나의 엘리먼트에 대하여 최소 사이즈는 250이며, 최대 사이즈는 row에 250사이즈의 엘리먼트가 들어갈 수 없는 범위까지  */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    // height: 100%;
+  }
+  
 }

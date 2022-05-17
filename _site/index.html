@@ -24,57 +24,58 @@
   <body>
       <!-- 초기 화면은 Sidebar 제공 X -->
         
-        <div class="container">
-    <div class="product">
+        <div class="main">
+    <div class="container">
+        <div class="product">
 
-        <h2 id="frontImg">Blog</h2>
-        <h2 id="backImg">Project</h2>
-        <!-- <img src="images/shoes2.png" alt="" id="backImg"> -->
+            <h2 id="frontImg">Blog</h2>
+            <h2 id="backImg">Project</h2>
+            <!-- <img src="images/shoes2.png" alt="" id="backImg"> -->
 
-        <div class="product-inner" id="productBox">
-            <div class="product-front">
-                <div class="product-top">
-                    <h1>DG An</h1>
-                </div>
-                <div class="product-bottom">
-                    <p>사이트 선택</p>
-                    <h2>블로그</h2>
-                    <button type="button" onclick="movePage('blog')">선택하기</button>
-                    <div class="color-select">
-                        <div class="select-item" name="blog">
-                            Blog
-                        </div>
-                        <div class="select-item" name="project" onclick="flipRight(this)">
-                            Project
+            <div class="product-inner" id="productBox">
+                <div class="product-front">
+                    <div class="product-top">
+                        <h1>DG An</h1>
+                    </div>
+                    <div class="product-bottom">
+                        <p>사이트 선택</p>
+                        <h2>블로그</h2>
+                        <button type="button" onclick="movePage('blog')">선택하기</button>
+                        <div class="color-select">
+                            <div class="select-item" name="blog">
+                                Blog
+                            </div>
+                            <div class="select-item" name="project" onclick="flipRight(this)">
+                                Project
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="product-back">
-                <div class="product-top product-top2">
-                    <h1>DG An</h1>
-                </div>
-                <div class="product-bottom">
-                    <p>사이트 선택</p>
-                    <h2>프로젝트</h2>
-                    <button type="button" onclick="movePage('project')">선택하기</button>
-                    <div class="color-select" >
-                        <div class="select-item" name="blog" onclick="flipLeft()">
-                            Blog
-                        </div>
-                        <div class="select-item" name="project"> 
-                            Project
+                <div class="product-back">
+                    <div class="product-top product-top2">
+                        <h1>DG An</h1>
+                    </div>
+                    <div class="product-bottom">
+                        <p>사이트 선택</p>
+                        <h2>프로젝트</h2>
+                        <button type="button" onclick="movePage('project')">선택하기</button>
+                        <div class="color-select">
+                            <div class="select-item" name="blog" onclick="flipLeft()">
+                                Blog
+                            </div>
+                            <div class="select-item" name="project">
+                                Project
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="left-side"></div>
-            <div class="right-side"></div>
+                <div class="left-side"></div>
+                <div class="right-side"></div>
 
+            </div>
         </div>
     </div>
 </div>
-
     
     
   </body>
