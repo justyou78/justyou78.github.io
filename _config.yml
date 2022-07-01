@@ -1,6 +1,10 @@
 collections:
   authors:
     output: true
+  react:
+    output: true
+  blog:
+    output: true
 
 defaults:
   - scope:
@@ -8,9 +12,16 @@ defaults:
       type: 'authors'
     values:
       layout: 'author'
+      image: '/assets/images/default-image.jpg'
   - scope:
       path: ''
       type: 'posts'
+    values:
+      layout: 'post'
+      image: '/assets/images/default-image.jpg'
+  - scope:
+      path: ''
+      type: 'react'
     values:
       layout: 'post'
       image: '/assets/images/default-image.jpg'

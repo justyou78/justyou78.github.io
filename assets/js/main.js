@@ -37,6 +37,7 @@ function flipLeft() {
 function movePage(type) {
   if (type === 'project') {
     alert('준비중....');
+    return;
   }
   var link = window.location.href;
   location.href = `${link}/blog`;
