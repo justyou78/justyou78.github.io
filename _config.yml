@@ -9,7 +9,6 @@ collections:
     output: true
   webpack:
     output: true
-
 defaults:
   - scope:
       path: ''
@@ -38,3 +37,5 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+theme: minima

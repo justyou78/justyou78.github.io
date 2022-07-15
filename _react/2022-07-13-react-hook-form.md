@@ -2,8 +2,6 @@
 layout: post
 ---
 
-# **react-hook-form**
-
 안녕하세요. 오늘은 react 패키지인 react-hook-form에 대하여 설명을 드리겠습니다.
 
 이 패키지는 현재 사내 GUI 개발에서 사용 중입니다.
@@ -12,7 +10,7 @@ layout: post
 
 **해당 내용은 react에 대한 기본적인 지식이 필요합니다.**
 
-링크: [react-hook-form](https://react-hook-form.com/, 'link. react-hook-form')
+링크: [react-hook-form](https://react-hook-form.com 'link. react-hook-form')
 
 ## 패키지 기본 동작
 
@@ -28,7 +26,7 @@ layout: post
 
 (값이 변경되지 않은 pw로 랜더링이 이루어진다.)
 
-```javascript
+```react
 import { useState } from 'react';
 
 export default function App() {
@@ -57,7 +55,7 @@ export default function App() {
 
 하지만 설정이 많아 지고 각 설정에 대한 컴포넌트가 무거워진 경우라고 생각해 봅겠습니다.
 
-```javascript
+```react
 import { useState } from 'react';
 
 export default function App() {
@@ -89,7 +87,7 @@ ID에 타이핑을 하나만 하더라도 많은 설정과 HeavyComponent가 랜
 
 아래 패키지를 반영한 코드를 보면서 확인해 보겠습니다.
 
-```javascript
+```react
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
@@ -136,7 +134,7 @@ useForm에서 불러오는 handleSubmit 버튼을 클릭할 경우에만 그제�
 
 바로 코드를 보겠습니다.
 
-```javascript
+```react
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
@@ -197,7 +195,7 @@ export default function App() {
 
 조금 더 최적화를 해보겠습니다.
 
-```javascript
+```react
 import React, { Fragment } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 
@@ -282,18 +280,18 @@ id 값이 변경될 때마다 컨트롤러 컴포넌트가 지속적으로 랜�
 ## 추가적으로 유용한 내용
 
 1. 다양한 API
-    * <https://react-hook-form.com/api> 
+   - <https://react-hook-form.com/api>
 2. React Native 지원
 3. 테이블의 각 셀에 대한 랜더링 최적화
-    * 해당 내용은 <https://react-hook-form.com/api/usefieldarray>에서 확인하실 수 있습니다.
+   - 해당 내용은 <https://react-hook-form.com/api/usefieldarray>에서 확인하실 수 있습니다.
 4. 여러 Validation 라이브러리 사용 가능
-    * > We also support schema-based form validation with Yup, Zod , Superstruct & Joi
-    * 해당 라이브러리를 통해 통합된 Validation을 적용 시킬 수 있습니다
-        * 현재 사내에서도 yup를 이용하여 validation을 적용하고 있습니다.
+   - > We also support schema-based form validation with Yup, Zod , Superstruct & Joi
+   - 해당 라이브러리를 통해 통합된 Validation을 적용 시킬 수 있습니다
+     - 현재 사내에서도 yup를 이용하여 validation을 적용하고 있습니다.
 
 ## 정리
 
-*이제 정리를 해볼까요?*
+_이제 정리를 해볼까요?_
 
 ### 실제 사용 후기
 
@@ -301,9 +299,7 @@ id 값이 변경될 때마다 컨트롤러 컴포넌트가 지속적으로 랜�
 
 이와 같은 상황에서 해당 패키지를 적용했을 때, 각 설정 부분만 랜더링 되고, 이에따라서 분명한 속도 개선을 확인할 수 있었습니다.
 
-
 ### 장점과 단점
-
 
 #### 장점
 
@@ -315,4 +311,4 @@ id 값이 변경될 때마다 컨트롤러 컴포넌트가 지속적으로 랜�
 
 1. React에 대한 충분한 지식이 없을 경우, 패키지의 동작 시나리오를 이해하기 어려울 수 있습니다.
 2. 나름 안정적인 패키지이지만 업데이트시 패키지의 문제가 생기는 경우가 종종 있습니다.
-    * 실제 개발과정에서 문제를 찾을 수 없는 에러가 존재했었는데 패키지를 업데이트하니까 에러가 해결된 경우가 있었습니다.
+   - 실제 개발과정에서 문제를 찾을 수 없는 에러가 존재했었는데 패키지를 업데이트하니까 에러가 해결된 경우가 있었습니다.
