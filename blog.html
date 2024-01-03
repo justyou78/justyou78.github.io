@@ -4,24 +4,44 @@ title: Blog
 tags: test 
 ---
 
-<div class="gallery">
-    {% for post in site.posts %}
-    <a href="{{ post.url }}">
-        
-        <img src="{{ post.image }}" alt="">
-        <dl>
-            <dt>{{ post.title }}</dt>
-            <dd>{{ post.excerpt }}</dd>         
-        </dl>
-    </a>
-    {% endfor %}
-    {% for tag in site.tags %}
-    <h3>{{ tag[0] }}</h3>
-    <ul>
-      {% for post in tag[1] %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
-  {% endfor %}
-<!-- <div>hellow</div> -->
+<div class="intro">
+  <section id="home" class="home intro__wrapper">
+    <div class="home__container intro__container grid">
+      <img src="/assets/images/common/donggue1.png" alt="author image1" class="home__img">
+      <div class="home__message">
+        <h1>음... 저는 말이죠...</h1>
+        <p class="home__description">
+          프론트앤드 개발자입니다.
+          블로그는 뭐... 기억해야 할 것들 좀 적어두려구요.
+          궁금했던 정보가 여기에 있으면 좋겠네요.
+          좋은 하루 되세용~
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="target" class="target intro__wrapper" >
+    <div class="target__container intro__container grid">
+      <img src="/assets/images/common/donggue2.png" alt="author image2" class="target__img">
+      <div class="target__message">
+        <h1>2024 목표</h1>
+        <p class="target__description">
+          블로그에 개발 포스트를 한 15개 정도? 올려보려구요~
+          성공할지 잘 모르겠는데... 그냥 뭐 해보는 거죠.
+          아 그리고 블로그 환경도 좀 개선해야 될 것 같네요.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="nothing" class="nothing intro__wrapper">
+    <div class="nothing__container grid">
+      <div class="sun-wrapper" ><canvas id="sunCanvas" width="400" height="400"></canvas></div>
+      <img src="/assets/images/common/donggue3.png" alt="author image3" class="nothing__img">
+      <div class="nothing__message">
+        <h1>무슨 말을 하지...</h1>
+        <p class="nothing__description">
+          어서오세용~ 잘와쪄염~
+        </p>
+      </div>
+    </div>
 </div>
+
