@@ -30,6 +30,12 @@ defaults:
       image: '/assets/images/default-image.jpg'
   - scope:
       path: ''
+      type: 'javascript'
+    values:
+      layout: 'post'
+      image: '/assets/images/default-image.jpg'
+  - scope:
+      path: ''
     values:
       layout: 'default'
 
