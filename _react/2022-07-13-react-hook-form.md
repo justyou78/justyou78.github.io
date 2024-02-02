@@ -57,7 +57,7 @@ export default function App() {
 }
 ```
 
-![useState_render](/assets/images/react/useState_render.gif){:height="40%" width="100%"}
+![useState_render](/assets/images/react/useState_render.gif)
 
 상태 변경에 따라서 각 설정(ID, PW)이 랜더링 됩니다.
 
